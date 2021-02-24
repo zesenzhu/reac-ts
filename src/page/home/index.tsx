@@ -6,14 +6,17 @@
  * @Description: 祝泽森
  * @FilePath: \TypeScript\react-ts\src\page\home\index.tsx
  */
-import React, { memo,forwardRef, } from "react";
+import React, { memo, forwardRef, } from "react";
 interface Props {
-  children?:React.ReactNode
+  children?: React.ReactNode
 }
- 
-const Home: React.ForwardRefRenderFunction<HTMLDivElement,Props>  = (props: Props, ref:any) => {
-  console.log(ref)
+
+const Home: React.ForwardRefRenderFunction<HTMLDivElement, Props> = (props: Props, ref) => {
+  enum testEnum {
+    a=10, b, c, d
+  }
+console.log(testEnum)
   return <p>这是ts</p>;
 };
 
-export default forwardRef (Home)
+export default forwardRef(Home)
